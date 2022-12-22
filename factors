@@ -15,16 +15,14 @@ if(ac != 2):
 
 def factorizer(n):
     p = 2
-    q = 2
-    while (p * q <= n):
-        while(p * q <= n):
-            if (q * p == n):
-                print("{} = {} * {}".format(n, q, p))
-                return
-            q += 1
-        q = 2
-        p += 1
+    
+    if (n < 2):
+        return
 
+    while (n % p):
+        p += 1
+    
+    print("{} = {:.0f} * {}".format(n, n/p, p))
 
 """Opening a test file containing test cases(n)"""
 
