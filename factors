@@ -34,6 +34,6 @@ def file_open(file):
         for num in f:
             num = int(num)
             factorizer(num)
-
+    f.close()
 
 file_open(sys.argv[1])
